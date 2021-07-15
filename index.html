@@ -12,106 +12,83 @@
     <link href="style.css" rel="stylesheet">
 
 
-    <title>Document</title>
+    <title>Sauna-Zhanarys-Ast</title>
 </head>
 
 <body>
 
-    <section class="home relative ">
+    <section id="home" class="home relative ">
         <div class="container lg:px-0 px-5 mx-auto">
             <div class="navbar w-full flex justify-between  pt-5 ">
 
-         
-                  
-                
-                    <nav
-                    class="flex items-center justify-between relative z-50 flex-wrap py-6 fixed w-full z-10 top-0"
-                    x-data="{ isOpen: false }"
-                    @keydown.escape="isOpen = false"
-                    :class="{ 'shadow-lg bg-transparent' : isOpen }"
-                  >
+
+
+
+                <nav class="flex items-center justify-between relative z-50 flex-wrap py-6 fixed w-full z-10 top-0"
+                    x-data="{ isOpen: false }" @keydown.escape="isOpen = false"
+                    :class="{ 'shadow-lg bg-transparent' : isOpen }">
                     <!--Logo etc-->
                     <div class="flex items-center flex-shrink-0 text-white mr-6">
-                      <a
-                        class="text-white no-underline hover:text-white hover:no-underline"
-                        href="#"
-                      >
-                        <span class="text-2xl pl-2 logo text-sm"
-                          ><i class="em em-grinning"></i> Sauna-Zhanarys-Ast</span
-                        >
-                      </a>
+                        <a class="text-white no-underline hover:text-white hover:no-underline" href="#">
+                            <span class="text-2xl pl-2 logo text-sm"><i class="em em-grinning"></i>
+                                Sauna-Zhanarys-Ast</span>
+                        </a>
                     </div>
-              
-                    <!--Toggle button (hidden on large screens)-->
-                    <button
-                      @click="isOpen = !isOpen"
-                      type="button"
-                      class="block lg:hidden p-2 text-gray-500 hover:text-white focus:outline-none focus:text-white"
-                      :class="{ 'transition transform-180': isOpen, 'bg-gray-800': isOpen }"
-                    >
-                      <svg
-                        class="h-6 w-6 fill-current"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          x-show="isOpen"
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
-                        />
-                        <path
-                          x-show="!isOpen"
-                          fill-rule="evenodd"
-                          d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
-                        />
-                      </svg>
-                    </button>
-              
-                    <!--Menu-->
-                    <div
-                      class="w-full flex-grow lg:flex lg:items-center lg:w-auto lg:relative absolute lg:top-0 top-16 left-0"
-                      :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen, 'bg-gray-800' : isOpen }"
-                      @click.away="isOpen = false"
-                      x-show.transition="true"
-                    >
-                      <ul
-                        class="pt-6 lg:pt-0 list-reset lg:flex items-center"
-                      >
-                        <li class="mr-3">
-                          <a
-                            class="inline-block py-2 px-4 text-white no-underline"
-                            href="#"
-                            @click="isOpen = false"
-                            >Главная
-                          </a>
-                        </li>
-                        <li class="mr-3">
-                          <a
-                            class="inline-block text-white no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
-                            href="#"
-                            @click="isOpen = false"
-                            >Фотогалерея
-                          </a>
-                        </li>
-                        <li class="mr-3 lg:mb-0 mb-5">
-                          <a
-                            class="inline-block text-white no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
-                            href="#"
-                            @click="isOpen = false"
-                            >Контакты
-                          </a>
-                        </li>
-                     
-                      </ul>
-                    </div>
-                  </nav>
-              
 
-            
-                <div class="navbar__right  items-center relative z-50 lg:flex hidden ">
+                    <!--Toggle button (hidden on large screens)-->
+                    <button @click="isOpen = !isOpen" type="button"
+                        class="block lg:hidden p-2 text-white hover:text-white focus:outline-none focus:text-white"
+                        :class="{ 'transition transform-180': isOpen }">
+                        <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" />
+                            <path x-show="!isOpen" fill-rule="evenodd"
+                                d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
+                        </svg>
+                    </button>
+
+                    <!--Menu-->
+                    <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto lg:relative absolute lg:top-0 top-20 left-0"
+                        :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen, 'bg-gray-800' : isOpen }"
+                        @click.away="isOpen = false" x-show.transition="true">
+                        <ul class="pt-6 lg:pt-0 list-reset lg:flex items-center">
+                            <li class="mr-3">
+                                <a class="inline-block py-2 px-4 text-white no-underline" href="#"
+                                @click="$scroll('#second'), isOpen = false">
+                                    Главная</a>
+                                </a>
+                            </li>
+                            <li class="mr-3">
+                                <a class="inline-block text-white no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+                                    href="#" @click="$scroll('#second'), isOpen = false">
+                                    Услуги
+                                </a>
+                            </li>
+
+                            <li class="mr-3">
+                                <a class="inline-block text-white no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+                                    href="#" @click="$scroll('#second'), isOpen = false">Фотогалерея
+                                </a>
+                            </li>
+
+
+                            <li class="mr-3 lg:mb-0 mb-5">
+                                <a class="inline-block text-white no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+                                    href="#" @click="$scroll('#second'), isOpen = false">Контакты
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+
+
+
+                <div class="navbar__right justify-end w-full items-center relative z-50 lg:flex hidden ">
                     <div class="pr-5 font-bold">+7 (747) 167-91-01 +7 (775) 284-06-55 </div>
-                    <div class="py-3 px-5 bg-red-500 rounded-full uppercase text-sm tracking-wide font-bold hover:bg-red-400 cursor-pointer transition ">Отправить заявку</div>
+                    <div
+                        class="py-3 px-5 bg-red-500 rounded-full uppercase text-sm tracking-wide font-bold hover:bg-red-400 cursor-pointer transition ">
+                        Отправить заявку</div>
                 </div>
             </div>
         </div>
@@ -121,13 +98,16 @@
             <div class="text-center flex flex-col items-center relative z-50">
                 <h1 class="home__title lg:text-8xl text-3x1 mb-5">Сауна в Астане</h1>
                 <h2 class="home__sub-title">Ощутите всю прелесть полноценной банной процедуры.</h2>
-                <div class="py-4 px-6 bg-green-500 lg:w-1/3 w-1/1 rounded-full mt-10 uppercase text-sm tracking-wide font-bold hover:bg-green-400 cursor-pointer transition ">написать в whatsapp</div>
+                <div
+                    class="py-4 px-6 bg-green-500 lg:w-1/3 w-1/1 rounded-full mt-10 uppercase text-sm tracking-wide font-bold hover:bg-green-400 cursor-pointer transition ">
+                    написать в whatsapp</div>
             </div>
 
         </div>
 
         <div class="arrow w-full absolute -bottom-10 flex items-center justify-center">
-            <img class="relative z-50" src="img/arrow.svg" alt="">
+            <img x-data x-on:click="$scroll('#second')" class="relative z-50 cursor-pointer" src="img/arrow.svg" alt="">
+
         </div>
 
     </section>
@@ -138,32 +118,47 @@
             <h1 class="title text-red-500 my-5 text-4xl ">Вас ожидают</h1>
         </div>
 
-        <div class="container lg:px-0 px-5 mx-auto">
+        <div id="second" class="container lg:px-0 px-5 mx-auto">
             <div class="grid lg:grid-cols-4 grid-cols-2 gap-4 text-black font-bold">
 
                 <div class="service__item relative flex justify-center service__one ">
-                    <div class="white_label py-3 w-1/2 absolute bottom-10 rounded-full text-center uppercase">Бассейн</div>
+                    <div class="white_label py-3 w-1/2 absolute bottom-10 rounded-full text-center uppercase">Бассейн
+                    </div>
                 </div>
                 <div class="service__item relative flex justify-center service__two">
-                    <div class="white_label py-3 w-1/2 absolute bottom-10 lg:mt-40 mt-10  rounded-full text-center uppercase">Бильярд</div>
+                    <div
+                        class="white_label py-3 w-1/2 absolute bottom-10 lg:mt-40 mt-10  rounded-full text-center uppercase">
+                        Бильярд</div>
                 </div>
                 <div class="service__item relative flex justify-center service__three">
-                    <div class="white_label py-3 w-1/2 absolute bottom-10 lg:mt-40 mt-10  rounded-full text-center uppercase">караоке</div>
+                    <div
+                        class="white_label py-3 w-1/2 absolute bottom-10 lg:mt-40 mt-10  rounded-full text-center uppercase">
+                        караоке</div>
                 </div>
                 <div class="service__item relative flex justify-center service__four">
-                    <div class="white_label py-3 w-1/2 absolute bottom-10 lg:mt-40 mt-10  rounded-full text-center uppercase">комнаты отдыха</div>
+                    <div
+                        class="white_label py-3 w-1/2 absolute bottom-10 lg:mt-40 mt-10  rounded-full text-center uppercase">
+                        комнаты отдыха</div>
                 </div>
                 <div class="service__item relative flex justify-center service__five ">
-                    <div class="white_label py-3 w-1/2 absolute bottom-10 lg:mt-40 mt-10  rounded-full text-center uppercase">Вкусная кухня</div>
+                    <div
+                        class="white_label py-3 w-1/2 absolute bottom-10 lg:mt-40 mt-10  rounded-full text-center uppercase">
+                        Вкусная кухня</div>
                 </div>
                 <div class="service__item relative flex justify-center service__six">
-                    <div class="white_label py-3 w-1/2 absolute bottom-10 lg:mt-40 mt-10  rounded-full text-center uppercase">тенис</div>
+                    <div
+                        class="white_label py-3 w-1/2 absolute bottom-10 lg:mt-40 mt-10  rounded-full text-center uppercase">
+                        тенис</div>
                 </div>
                 <div class="service__item relative flex justify-center service__seven">
-                    <div class="white_label py-3 w-1/2 absolute bottom-10 lg:mt-40 mt-10  rounded-full text-center uppercase">бар</div>
+                    <div
+                        class="white_label py-3 w-1/2 absolute bottom-10 lg:mt-40 mt-10  rounded-full text-center uppercase">
+                        бар</div>
                 </div>
                 <div class="service__item relative flex justify-center service__eight">
-                    <div class="white_label py-3 w-1/2 absolute bottom-10 lg:mt-40 mt-10  rounded-full text-center uppercase">веники</div>
+                    <div
+                        class="white_label py-3 w-1/2 absolute bottom-10 lg:mt-40 mt-10  rounded-full text-center uppercase">
+                        веники</div>
                 </div>
 
             </div>
@@ -186,9 +181,9 @@
                 <div class="img__work"><img src="img/work/4.png" alt=""></div>
                 <div class="img__work"><img src="img/work/5.png" alt=""></div>
                 <div class="img__work"><img src="img/work/6.png" alt=""></div>
-            </div>    
             </div>
-            </section>
+        </div>
+    </section>
 
     <!-- <section>
         <div class="flex w-full justify-center items-center mt-20">
@@ -197,28 +192,31 @@
     </section> -->
 
 
-<section class="relative flex justify-center lg:px-0 px-5 mt-20 overflow-hidden">
+    <section class="relative flex justify-center lg:px-0 px-5 mt-20 overflow-hidden">
 
-    <img class="absolute -top-0 z-50" src="img/phone_bot.svg" alt="">
+        <img class="absolute -top-0 z-50" src="img/phone_bot.svg" alt="">
 
-    <div class="map relative z-40 flex justify-center mt-20 w-full">
-      
-        <div class="map__badge rounded-lg absolute -top-10 z-45 h-50 lg:w-1/3 w-full p-20 flex justify-center items-center flex-col ">
-         <div class="map__text text-center">
-            <h1 class="text-5xl mt-5">Оставьте заявку</h1>
-         <h1 class="text-4xl mt-3 bordered">и</h1>
-           <h1 class="text-4xl mt-3">получите скидку!</h1>
-           </div>
-            <div class="py-3 px-5 btn-footer rounded-full text-gray-900 mt-5 uppercase mt-20">Отправить заявку</div>
+        <div class="map relative z-40 flex justify-center mt-20 w-full">
+
+            <div
+                class="map__badge rounded-lg absolute -top-10 z-45 h-50 lg:w-1/3 w-full p-20 flex justify-center items-center flex-col ">
+                <div class="map__text text-center">
+                    <h1 class="text-5xl mt-5">Оставьте заявку</h1>
+                    <h1 class="text-4xl mt-3 bordered">и</h1>
+                    <h1 class="text-4xl mt-3">получите скидку!</h1>
+                </div>
+                <div class="py-3 px-5 btn-footer rounded-full text-gray-900 mt-5 uppercase mt-20">Отправить заявку</div>
+            </div>
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d526.139664151223!2d71.5114183025596!3d51.14984812571578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42458183c1b2a57f%3A0x872ee147ec1cba1d!2z0YPQuy4g0JbQsNC90LDRgNGL0YEgNTEsINCd0YPRgC3QodGD0LvRgtCw0L0gMDEwMDAw!5e0!3m2!1sru!2skz!4v1625935542438!5m2!1sru!2skz"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
         </div>
+        <script src="https://cdn.jsdelivr.net/gh/alpine-collective/alpine-magic-helpers/dist/scroll.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d526.139664151223!2d71.5114183025596!3d51.14984812571578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42458183c1b2a57f%3A0x872ee147ec1cba1d!2z0YPQuy4g0JbQsNC90LDRgNGL0YEgNTEsINCd0YPRgC3QodGD0LvRgtCw0L0gMDEwMDAw!5e0!3m2!1sru!2skz!4v1625935542438!5m2!1sru!2skz"
-            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
-    </div>
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
-</section>
+    </section>
     <footer class="bg-red-500 flex items-center justify-center">
         наш адрес: Адрес жанарыс 51/1
     </footer>
